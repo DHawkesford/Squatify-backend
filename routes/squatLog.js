@@ -1,5 +1,5 @@
 import express from "express";
-import { getSquatLog } from "../models/users.js";
+import { getSquatLog, postSquatLog } from "../models/squat_log.js";
 
 const router = express.Router();
 
@@ -11,4 +11,12 @@ router.get("/", async function (req, res, next) {
   res.json(squatLog);
 });
 
+//We're expecting the frontend to send a post request with the shape of {no_squats: integer},
+//e.g. {no_squats: 30}
+router.post("/", async function (req, res, next) {
+  const newSquats = await postSquatLog(req.body.no_squats);
+  res.json(newSquats);
+});
+
+//We're exporting it under the name router here, but importing it under the name squatLogRouter in app.js
 export default router;
