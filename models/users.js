@@ -1,6 +1,6 @@
-import { query } from "../db/connection.js";
+import db from "../db/connection.js";
 
-export async function getAllUsers() {
-  const result = query(`SELECT * FROM users;`);
+export async function getSquatLog() {
+  const result = await db.query(`SELECT * FROM squat_log;`);
   return result.rows;
 }
