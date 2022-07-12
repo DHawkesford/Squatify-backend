@@ -16,7 +16,7 @@ router.get("/", async function (req, res, next) {
 router.post("/", async function (req, res, next) {
   const newSquats = await postSquatLog(req.body.no_squats);
   res.json(newSquats);
-});
+}); 
 
 //We're exporting it under the name router here, but importing it under the name squatLogRouter in app.js
 export default router;
