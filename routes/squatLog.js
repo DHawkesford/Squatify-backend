@@ -8,7 +8,7 @@ Data will come through as an array of objects
 E.g. [{"id":1,"no_squats":15},{"id":2,"no_squats":18},{"id":3,"no_squats":22}]*/
 router.get("/", async function (req, res, next) {
   const squatLog = await getSquatLog();
-  res.json({squatLog});
+  res.json(squatLog);
 });
 
 //We're expecting the frontend to send a post request with the shape of {no_squats: integer},
