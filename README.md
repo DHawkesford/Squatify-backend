@@ -1,5 +1,7 @@
 # Squatify
 
+[Link to front-end repo](https://github.com/DHawkesford/Squatify-frontend)
+
 This is an app that tracks your daily squats.
 At the School of Code, it's a tradition to kick every morning off with a bunch of squats done to a song of choice.
 As students of the School of Code, we created this app as an nod to this tradition.
